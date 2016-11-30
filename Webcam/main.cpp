@@ -30,8 +30,8 @@ int main(int argc, char *argv[]){
 
 		int ret = waitKey(1);
 
-		if (ret == 27) break;
-		else if (ret == 13) {
+		if (ret == 27) break; // Press 'Esc'
+		else if (ret == 13) { // Press 'Enter'
 			char buf[1024];
 			sprintf_s(buf, "webcam%d.jpg", index++);
 			imwrite(string(buf), frame);
